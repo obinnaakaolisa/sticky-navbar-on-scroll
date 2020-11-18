@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    min-height: 120vh;
+    background: url(../images/watch-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .6s;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+
+nav.sticky {
+    
+    padding: 8px 100px;
+    background: #fff;
+}
+
+nav .logo {
+    position: relative;
+    font-weight: 700;
+    color: #d6d6d6;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: .6s;
+}
+
+nav ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav ul li {
+    position: relative;
+    list-style: none;
+}
+
+nav ul li a{
+    position: relative;
+    text-decoration: none;
+    margin: 0 15px;
+    color: #d6d6d6;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: .6s;
+}
+
+
+nav ul li a:hover, nav .logo:hover{
+    color: #fff;
+}
+
+
+nav.sticky ul li a, nav.sticky .logo {
+    color: #000;
+
+}
+
+.banner {
+    width: 100%;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 100px;
+}
+
+.banner h1 {
+    font-weight: 900;
+    font-size: 2.6em;
+    color: #ebebeb;
+    letter-spacing: 2px;
+    margin: 8px 0;
+}
+
+.banner p {
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #ebebeb;
+    letter-spacing: 1px;
+}
+
+
+/*Media Queries*/
+
+@media only screen and (max-width: 600px) {
+    nav {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: .6s;
+        padding: 40px 20px;
+        z-index: 1000;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+        
+    nav.sticky {
+        padding: 20px 20px;
+    }
+        
+    .banner {
+        width: 100%;
+        top: 150px;
+        height: 100%;
+        padding: 0 20px;
+    }
+
+    .banner h1 {
+        font-size: 2.2em;
+    }
+
+    .banner p {
+        font-size: 1.2em;
+    }
+
+}
